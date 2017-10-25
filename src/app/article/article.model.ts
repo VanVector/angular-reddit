@@ -8,4 +8,15 @@
         this.link = link;
         this.votes = votes || 0;
     }
+
+    voteUp() { this.votes += 1; return false; };
+    voteDown() { this.votes -= 1; return false; };
+    domain(): string {
+        try {
+            const domainAndPAth: string = this.link.split('//')[1];
+            return domainAndPAth.split('/')[0];
+        } catch (err) {
+            return null;
+        }
+    }
 }

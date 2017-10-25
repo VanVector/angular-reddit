@@ -14,8 +14,8 @@ export class ArticleComponent implements OnInit {
         this.article = new Article('Angular 2','htt[://angular.io', 10);
     }
 
-    voteUp() { this.article.votes += 1; return false; };
-    voteDown() { this.article.votes -= 1; return false; };
+    voteUp() { this.article.voteUp(); return false; };
+    voteDown() { this.article.voteDown(); return false; };
 
     ngOnInit() {
     }
